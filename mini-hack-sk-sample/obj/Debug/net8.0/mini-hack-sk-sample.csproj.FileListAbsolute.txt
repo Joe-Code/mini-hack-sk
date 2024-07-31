@@ -46,3 +46,4 @@ C:\repos\mini-hack-sk\mini-hack-sk-sample\obj\Debug\net8.0\refint\mini-hack-sk-s
 C:\repos\mini-hack-sk\mini-hack-sk-sample\obj\Debug\net8.0\mini-hack-sk-sample.pdb
 C:\repos\mini-hack-sk\mini-hack-sk-sample\obj\Debug\net8.0\mini-hack-sk-sample.genruntimeconfig.cache
 C:\repos\mini-hack-sk\mini-hack-sk-sample\obj\Debug\net8.0\ref\mini-hack-sk-sample.dll
+C:\repos\mini-hack-sk\mini-hack-sk-sample\obj\Debug\net8.0\mini-hack-sk-sample.sourcelink.json
