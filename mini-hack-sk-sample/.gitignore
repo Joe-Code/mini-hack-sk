@@ -27,6 +27,8 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+bin/
+obj/
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/build/
