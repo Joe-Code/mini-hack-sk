@@ -12,7 +12,7 @@
 mono_crash.*
 
 # User-specific files (VSCode)
-.vscode/
+../.vscode/
 
 # Logs
 *.log
