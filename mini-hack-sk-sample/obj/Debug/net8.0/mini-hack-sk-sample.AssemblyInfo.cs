@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mini-hack-sk-sample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+106877f6b36d4f309fbcf909af7e61f4b244535b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8db2ea3425bfd43bc7cf211f2d143e256df4ae7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("mini-hack-sk-sample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mini-hack-sk-sample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

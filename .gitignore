@@ -25,8 +25,8 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
+**/bin/  # Exclude all bin folders
+**/obj/  # Exclude all obj folders
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/build/
@@ -42,3 +42,22 @@ artifacts/
 
 # Ignore .NET Core SDK files
 global.json
+
+
+# Rider
+.idea/
+*.sln.iml
+
+# Ignore test results
+TestResults/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+
+# Ignore publish output
+publish/
+
+# Ignore temporary files
+*.tmp
+*.temp
