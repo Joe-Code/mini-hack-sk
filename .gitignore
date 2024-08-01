@@ -28,6 +28,9 @@ bld/
 **/bin/  # Exclude all bin folders
 **/obj/  # Exclude all obj folders
 
+# NuGet package directories
+**/obj/**/*.nuget/
+
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/build/
 
