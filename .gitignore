@@ -18,7 +18,7 @@ mono_crash.*
 *.log
 
 # Build results
-[Dd]ebug/
+**/debug/
 [Rr]elease/
 x64/
 x86/
@@ -42,7 +42,6 @@ artifacts/
 
 # Ignore .NET Core SDK files
 global.json
-
 
 # Rider
 .idea/
