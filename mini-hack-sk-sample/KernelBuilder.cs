@@ -25,10 +25,10 @@ public static class KernelBuilder
         // Use DefaultAzureCredential to get the token
         var openAIClient = new OpenAIClient(new Uri(azureOpenAIEndpoint), new DefaultAzureCredential());
 
-        // Create kernel
-        var builder = Kernel.CreateBuilder();
-        builder.AddAzureOpenAIChatCompletion(deploymentName: modelDeploymentName, openAIClient: openAIClient);
+        // Create Kernel Builder
+        var kernelBuilder = Kernel.CreateBuilder();
+        kernelBuilder.AddAzureOpenAIChatCompletion(deploymentName: modelDeploymentName, openAIClient: openAIClient);
 
-        return builder;
+        return kernelBuilder;
     }
 }

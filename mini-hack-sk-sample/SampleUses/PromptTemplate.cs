@@ -39,7 +39,7 @@ namespace mini_hack_sk_sample
                 if (_kernel != null)
                 {
                     var result = await _kernel.InvokePromptAsync(prompt, new KernelArguments { { "history", history } });
-                    Console.WriteLine($"Result: {result}");
+                    Console.WriteLine($"Result: {result} + \n\n");
                 }
                 else
                 {
@@ -59,6 +59,7 @@ namespace mini_hack_sk_sample
             _kernel = kernelBuilder.Build();
 
             string input = @"I'm planning an anniversary trip with my spouse. We like hiking, mountains, and beaches. Our travel budget is $15000";
+            Console.WriteLine("The input is: " + input + "\n");
 
             string prompt = @$"
                 The following is a conversation with an AI travel assistant. 
@@ -72,7 +73,7 @@ namespace mini_hack_sk_sample
                 <message role=""user"">${input}</message>";
 
             var result = await _kernel.InvokePromptAsync(prompt);
-            Console.WriteLine(result);
+            Console.WriteLine(result + "\n\n");
         }
 
         public static async Task FlightAssistant(IKernelBuilder kernelBuilder)
@@ -82,6 +83,7 @@ namespace mini_hack_sk_sample
             _kernel = kernelBuilder.Build();
 
             string input = @"I have a vacation from June 1 to July 22. I want to go to Greece. I live in Chicago.";
+            Console.WriteLine("The input is: " + input + "\n");
 
             string prompt = @$"
                 <message role=""system"">Instructions: Identify the from and to destinations 
@@ -95,7 +97,7 @@ namespace mini_hack_sk_sample
                 <message role=""user"">${input}</message>";
 
             var result = await _kernel.InvokePromptAsync(prompt);
-            Console.WriteLine(result);
+            Console.WriteLine(result + "\n\n");
         }
     }
 }

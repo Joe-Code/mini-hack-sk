@@ -18,7 +18,7 @@ namespace mini_hack_sk_sample
             var kernel = kernelBuilder.Build();
 
             var currentDay = await kernel.InvokeAsync("TimePlugin", "DayOfWeek");
-            Console.WriteLine("Enjoy your: " + currentDay);
+            Console.WriteLine("Enjoy your: " + currentDay + "\n\n");
 
         }
     }

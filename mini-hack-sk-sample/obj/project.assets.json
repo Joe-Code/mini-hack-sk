@@ -432,11 +432,11 @@
           }
         }
       },
-      "Microsoft.SemanticKernel/1.16.1": {
+      "Microsoft.SemanticKernel/1.16.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.SemanticKernel.Connectors.OpenAI": "1.16.1",
-          "Microsoft.SemanticKernel.Core": "1.16.1"
+          "Microsoft.SemanticKernel.Connectors.OpenAI": "1.16.2",
+          "Microsoft.SemanticKernel.Core": "1.16.2"
         },
         "compile": {
           "lib/net8.0/Microsoft.SemanticKernel.dll": {
@@ -470,11 +470,11 @@
           }
         }
       },
-      "Microsoft.SemanticKernel.Connectors.OpenAI/1.16.1": {
+      "Microsoft.SemanticKernel.Connectors.OpenAI/1.16.2": {
         "type": "package",
         "dependencies": {
           "Azure.AI.OpenAI": "1.0.0-beta.17",
-          "Microsoft.SemanticKernel.Core": "1.16.1"
+          "Microsoft.SemanticKernel.Core": "1.16.2"
         },
         "compile": {
           "lib/net8.0/Microsoft.SemanticKernel.Connectors.OpenAI.dll": {
@@ -1335,10 +1335,10 @@
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.SemanticKernel/1.16.1": {
-      "sha512": "Zl8h/iBPQTcUkSEK+h5dOgK704Kjr1oGFxPUSkUjHqFzblCWJTMHCUPBaEAmZ4ZcKnEW+SwNuyD5yY0DjGjvvQ==",
+    "Microsoft.SemanticKernel/1.16.2": {
+      "sha512": "q1kkT+KZQfIcY7vbRQS2fnaTbjI4Yh5kPnNEhSjek83WmD3ys3v/WA6D39yX2vVbotCEtmYfHNvMC3FfFg+/2w==",
       "type": "package",
-      "path": "microsoft.semantickernel/1.16.1",
+      "path": "microsoft.semantickernel/1.16.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1348,7 +1348,7 @@
         "lib/net8.0/Microsoft.SemanticKernel.xml",
         "lib/netstandard2.0/Microsoft.SemanticKernel.dll",
         "lib/netstandard2.0/Microsoft.SemanticKernel.xml",
-        "microsoft.semantickernel.1.16.1.nupkg.sha512",
+        "microsoft.semantickernel.1.16.2.nupkg.sha512",
         "microsoft.semantickernel.nuspec"
       ]
     },
@@ -1369,10 +1369,10 @@
         "microsoft.semantickernel.abstractions.nuspec"
       ]
     },
-    "Microsoft.SemanticKernel.Connectors.OpenAI/1.16.1": {
-      "sha512": "S4iMvx7qiuA+mKZN/9sFB96zmlj/C8vi5ke0Z3XOTbnq5HGILeTH6SVZPYtPK1A1cNMLwYPtzH+ov20NzS7Hrg==",
+    "Microsoft.SemanticKernel.Connectors.OpenAI/1.16.2": {
+      "sha512": "4leXfRCkoXRnhSJvpVA0vG7Z3i9VC32aPZuKBRXQqfdg8B+aVXrROph67PVJ8zJ00RtbdAMzQexbFLlppiChnQ==",
       "type": "package",
-      "path": "microsoft.semantickernel.connectors.openai/1.16.1",
+      "path": "microsoft.semantickernel.connectors.openai/1.16.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1382,7 +1382,7 @@
         "lib/net8.0/Microsoft.SemanticKernel.Connectors.OpenAI.xml",
         "lib/netstandard2.0/Microsoft.SemanticKernel.Connectors.OpenAI.dll",
         "lib/netstandard2.0/Microsoft.SemanticKernel.Connectors.OpenAI.xml",
-        "microsoft.semantickernel.connectors.openai.1.16.1.nupkg.sha512",
+        "microsoft.semantickernel.connectors.openai.1.16.2.nupkg.sha512",
         "microsoft.semantickernel.connectors.openai.nuspec"
       ]
     },
@@ -1750,7 +1750,7 @@
     "net8.0": [
       "Azure.Identity >= 1.12.0",
       "Microsoft.Extensions.Azure >= 1.7.4",
-      "Microsoft.SemanticKernel >= 1.16.1",
+      "Microsoft.SemanticKernel >= 1.16.2",
       "Microsoft.SemanticKernel.Plugins.Core >= 1.16.2-alpha"
     ]
   },
@@ -1806,7 +1806,7 @@
           },
           "Microsoft.SemanticKernel": {
             "target": "Package",
-            "version": "[1.16.1, )"
+            "version": "[1.16.2, )"
           },
           "Microsoft.SemanticKernel.Plugins.Core": {
             "target": "Package",

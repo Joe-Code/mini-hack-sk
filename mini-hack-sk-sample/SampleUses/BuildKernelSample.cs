@@ -16,9 +16,12 @@ namespace mini_hack_sk_sample
             Console.WriteLine("Your Build Kernel Sample is ready to help you!\n");
             
             var kernel = kernelBuilder.Build();
+            var input = "Give me a list of breakfast foods with eggs and cheese";
+            
+            Console.WriteLine("The input is: " + input + "\n");
 
-            var result = await kernel.InvokePromptAsync("Give me a list of breakfast foods with eggs and cheese");
-            Console.WriteLine(result);
+            var result = await kernel.InvokePromptAsync(input);
+            Console.WriteLine(result + "\n\n");
         }
     }
 }
