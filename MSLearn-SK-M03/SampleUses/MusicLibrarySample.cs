@@ -1,13 +1,14 @@
 
+using System.Net.NetworkInformation;
 using Microsoft.SemanticKernel;
 
 namespace MSLearn_SK_M03
 {
     public class MusicLibrarySample
     {
-        public static async Task Execute(IKernelBuilder kernelBuilder)
+        public static async Task AddToRecentlyPlayed(IKernelBuilder kernelBuilder)
         {
-            Console.WriteLine("Your Music Library is ready to help you!\n");
+            Console.WriteLine("Adding a song to you Music Library!\n");
 
             Kernel kernel = kernelBuilder.Build();
             kernel.ImportPluginFromType<MusicLibraryPlugin>();
@@ -22,6 +23,27 @@ namespace MSLearn_SK_M03
                     ["genre"] = "rock, pop"
                 }
             );
+
+            Console.WriteLine(result);
+        }
+
+        public static async Task SuggestSongFromPlaylist(IKernelBuilder kernelBuilder)
+        {
+            Console.WriteLine("Suggesting a song from your Music Library!\n");
+
+            Kernel kernel = kernelBuilder.Build();
+            kernel.ImportPluginFromType<MusicLibraryPlugin>();
+
+            string prompt = @"This is a list of music available to the user:
+                            {{MusicLibraryPlugin.GetMusicLibrary}} 
+
+                            This is a list of music the user has recently played:
+                            {{MusicLibraryPlugin.GetRecentPlays}}
+
+                            Based on their recently played music, suggest a song from
+                            the list to play next";
+
+            var result = await kernel.InvokePromptAsync(prompt);
 
             Console.WriteLine(result);
         }

@@ -2,4 +2,5 @@
 
 Console.WriteLine("Hello, World!");
 
-await MusicLibrarySample.Execute(KernelBuilder.CreateKernelBuilder());
+// await MusicLibrarySample.AddToRecentlyPlayed(KernelBuilder.CreateKernelBuilder());
+await MusicLibrarySample.SuggestSongFromPlaylist(KernelBuilder.CreateKernelBuilder());

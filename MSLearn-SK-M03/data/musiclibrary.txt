@@ -1,0 +1,14 @@
+[
+    { title: "Satisfaction", artist: "The Rolling Stones", genre: "rock, classic rock" },
+    { title: "Hey Jude", artist: "The Beatles", genre: "rock, pop rock" },
+    { title: "Stairway to Heaven", artist: "Led Zeppelin", genre: "rock, hard rock" },
+    { title: "Hotel California", artist: "Eagles", genre: "rock, soft rock" },
+    { title: "Smells Like Teen Spirit", artist: "Nirvana", genre: "rock, grunge" },
+    { title: "Sweet Child o' Mine", artist: "Guns N' Roses", genre: "rock, hard rock" },
+    { title: "Purple Haze", artist: "Jimi Hendrix", genre: "rock, psychedelic rock" },
+    { title: "Jump", artist: "Van Halen", genre: "rock, hard rock" },
+    { title: "Born to Be Wild", artist: "Steppenwolf", genre: "rock, classic rock" },
+    { title: "Back in Black", artist: "AC/DC", genre: "rock, hard rock" },
+    { title: "American Pie", artist: "Don McLean", genre: "rock, folk rock" },
+    { title: "Bohemian Rhapsody", artist: "Queen", genre: "rock, progressive rock" }
+]

@@ -21,10 +21,7 @@ public class MusicLibraryPlugin
     }
 
     [KernelFunction, Description("Add a song to the recently played list")]
-    public static string AddToRecentlyPlayed(
-        [Description("The name of the artist")] string artist,
-        [Description("The title of the song")] string song,
-        [Description("The song genre")] string genre)
+    public static string AddToRecentlyPlayed([Description("The name of the artist")] string artist, [Description("The title of the song")] string song, [Description("The song genre")] string genre)
     {
         string filePath = "data/recentlyplayed.txt";
 
@@ -55,5 +52,20 @@ public class MusicLibraryPlugin
         }
 
         return $"Added '{song}' to recently played";
+    }
+
+    [KernelFunction, Description("Get a list of music available in the library")]
+    public static string GetMusicLibrary()
+    {
+        string dir = Directory.GetCurrentDirectory();
+        string filePath = $"{dir}/data/musiclibrary.txt";
+
+        if (!File.Exists(filePath))
+        {
+            return "No music library found.";
+        }
+
+        string content = File.ReadAllText(filePath);
+        return content;
     }
 }
