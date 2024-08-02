@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mini-hack-sk-sample", "mini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSLearn-SK-M02", "MSLearn-SK-M02\MSLearn-SK-M02.csproj", "{DF9A2FED-9BA5-402D-9549-474A462EF1EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSLearn-SK-M03", "MSLearn-SK-M03\MSLearn-SK-M03.csproj", "{00906B31-E832-4CAB-9EF1-EF6944D61FC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DF9A2FED-9BA5-402D-9549-474A462EF1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF9A2FED-9BA5-402D-9549-474A462EF1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF9A2FED-9BA5-402D-9549-474A462EF1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00906B31-E832-4CAB-9EF1-EF6944D61FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00906B31-E832-4CAB-9EF1-EF6944D61FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00906B31-E832-4CAB-9EF1-EF6944D61FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00906B31-E832-4CAB-9EF1-EF6944D61FC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

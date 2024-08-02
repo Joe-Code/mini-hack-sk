@@ -1,5 +1,4 @@
-﻿using Microsoft.SemanticKernel;
-using mini_hack_sk_sample;
+﻿using mini_hack_sk_sample;
 
 Console.WriteLine("Hello, Semantic Kernel World!\n");
 
