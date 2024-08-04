@@ -5,7 +5,7 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Plugins.Core;
 using Microsoft.SemanticKernel.ChatCompletion;
 
-namespace mini_hack_sk_sample
+namespace MSLearn_SK_M02
 {
     public class TravelAgent
     {
@@ -24,6 +24,8 @@ namespace mini_hack_sk_sample
                 ChatHistory history = [];
                 string input = @"I'm planning an anniversary trip with my spouse. We like hiking, 
                     mountains, and beaches. Our travel budget is $15000";
+
+                Console.WriteLine("The input is: " + input + "\n");
 
                 var result = await kernel.InvokeAsync<string>(prompts["SuggestDestinations"], new() {{ "input", input }});
                 if (string.IsNullOrEmpty(result))

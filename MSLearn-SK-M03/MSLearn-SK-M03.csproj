@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.16.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>

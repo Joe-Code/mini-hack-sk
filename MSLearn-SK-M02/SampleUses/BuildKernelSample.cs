@@ -7,7 +7,7 @@ using System;
 using System.Threading.Tasks;
 using Azure.AI.OpenAI;
 
-namespace mini_hack_sk_sample
+namespace MSLearn_SK_M02
 {
     public class BuildKernelSample
     {

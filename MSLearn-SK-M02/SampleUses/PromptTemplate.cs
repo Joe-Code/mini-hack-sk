@@ -3,7 +3,7 @@ using Azure.Identity;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Plugins.Core;
 
-namespace mini_hack_sk_sample
+namespace MSLearn_SK_M02
 {
     public class PromptTemplate
     {

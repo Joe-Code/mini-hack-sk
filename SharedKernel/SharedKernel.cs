@@ -1,6 +1,8 @@
-using Azure.AI.OpenAI;
+﻿using Azure.AI.OpenAI;
 using Azure.Identity;
 using Microsoft.SemanticKernel;
+
+namespace SharedKernel;
 
 public static class KernelBuilder
 {

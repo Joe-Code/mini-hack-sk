@@ -1,4 +1,5 @@
 ﻿using MSLearn_SK_M03;
+using SharedKernel;
 
 Console.WriteLine("Hello, World!");
 
