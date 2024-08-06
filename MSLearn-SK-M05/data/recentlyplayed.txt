@@ -1,0 +1,51 @@
+[
+   {"title": "Times Like These", "artist": "Foo Fighters", "genre": "rock, alternative rock" },
+    {"title": "I Am Mine", "artist": "Pearl Jam", "genre": "grunge, rock" },
+    {"title": "Vertigo", "artist": "U2", "genre": "rock, alternative rock" },
+    {"title": "Given Up", "artist": "Linkin Park", "genre": "rock, nu metal" },
+  {
+    "title": "Money for Nothing",
+    "artist": "Dire Straits",
+    "genre": "rock, pop"
+  },
+  {
+    "title": "Satisfaction",
+    "artist": "The Rolling Stones",
+    "genre": "rock, classic rock"
+  },
+  {
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "genre": "rock, pop rock"
+  },
+  {
+    "title": "Stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "genre": "rock, hard rock"
+  },
+  {
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "genre": "rock, soft rock"
+  },
+  {
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "genre": "rock, grunge"
+  },
+  {
+    "title": "Sweet Child o\u0027 Mine",
+    "artist": "Guns N\u0027 Roses",
+    "genre": "rock, hard rock"
+  },
+  {
+    "title": "Purple Haze",
+    "artist": "Jimi Hendrix",
+    "genre": "rock, psychedelic rock"
+  },
+  {
+    "title": "Jump",
+    "artist": "Van Halen",
+    "genre": "rock, hard rock"
+  }
+]

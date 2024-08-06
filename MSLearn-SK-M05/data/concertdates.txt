@@ -1,0 +1,54 @@
+[
+  {
+    "artist": "Stone Temple Pilots",
+    "concerts": [
+      { "location": "Tampa, FL, USA", "date": "8/28/2024" },
+      { "location": "Nashville, TN, USA", "date": "10/17/2024" }
+    ]
+  },
+  {
+    "artist": "Jane's Addiction",
+    "concerts": [
+      { "location": "Tampa, FL, USA", "date": "8/29/2024" },
+      { "location": "Orlando, FL, USA", "date": "9/1/2024" }
+    ]
+  },
+  {
+    "artist": "Imagine Dragons",
+    "concerts": [{ "location": "Tampa, FL, USA", "date": "9/1/2024" }]
+  },
+  {
+    "artist": "Incubus",
+    "concerts": [{ "location": "Tampa, FL, USA", "date": "9/3/2024" }]
+  },
+  {
+    "artist": "Coal Chamber",
+    "concerts": [{ "location": "Orlando, FL, USA", "date": "9/3/2024" }]
+  },
+  {
+    "artist": "The Fall of Troy",
+    "concerts": [
+      { "location": "Tampa, FL, USA", "date": "9/13/2024" },
+      { "location": "Orlando, FL, USA", "date": "9/12/2024" }
+    ]
+  },
+  {
+    "artist": "Badflower",
+    "concerts": [{ "location": "Orlando, FL, USA", "date": "9/7/2024" }]
+  },
+  {
+    "artist": "Nothing More",
+    "concerts": [{ "location": "Orlando, FL, USA", "date": "9/14/2024" }]
+  },
+  {
+    "artist": "Korn",
+    "concerts": [
+      { "location": "Tampa, FL, USA", "date": "9/12/2024" },
+      { "location": "Orlando, FL, USA", "date": "9/15/2024" }
+    ]
+  },
+  {
+    "artist": "Alkaline Trio",
+    "concerts": [{ "location": "Orlando, FL, USA", "date": "9/14/2024" }]
+  }
+]

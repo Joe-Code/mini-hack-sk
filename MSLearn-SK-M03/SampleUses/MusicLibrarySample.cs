@@ -1,5 +1,4 @@
 
-using System.Net.NetworkInformation;
 using Microsoft.SemanticKernel;
 
 namespace MSLearn_SK_M03
@@ -8,7 +7,7 @@ namespace MSLearn_SK_M03
     {
         public static async Task AddToRecentlyPlayed(IKernelBuilder kernelBuilder)
         {
-            Console.WriteLine("Adding a song to you Music Library!\n");
+            Console.WriteLine("Adding a song to your Music Library!\n");
 
             Kernel kernel = kernelBuilder.Build();
             kernel.ImportPluginFromType<MusicLibraryPlugin>();

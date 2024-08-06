@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSLearn-SK-M04", "MSLearn-S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "SharedKernel\SharedKernel.csproj", "{68D360F8-6139-44B3-98E5-86A175B01839}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mslearn-sk-m05", "MSLearn-SK-M05\MSLearn-SK-M05.csproj", "{94AC4693-BBAA-4B30-A610-F7C6B88E2250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aitravelagent", "AITravelAgent\AITravelAgent.csproj", "{3AAECD42-49F1-4BC2-B340-82C9B192FD2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{68D360F8-6139-44B3-98E5-86A175B01839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D360F8-6139-44B3-98E5-86A175B01839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D360F8-6139-44B3-98E5-86A175B01839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AC4693-BBAA-4B30-A610-F7C6B88E2250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AC4693-BBAA-4B30-A610-F7C6B88E2250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AC4693-BBAA-4B30-A610-F7C6B88E2250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AC4693-BBAA-4B30-A610-F7C6B88E2250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAECD42-49F1-4BC2-B340-82C9B192FD2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAECD42-49F1-4BC2-B340-82C9B192FD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAECD42-49F1-4BC2-B340-82C9B192FD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAECD42-49F1-4BC2-B340-82C9B192FD2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

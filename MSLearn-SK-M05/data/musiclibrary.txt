@@ -1,0 +1,27 @@
+[
+    { title: "Satisfaction", artist: "The Rolling Stones", genre: "rock, classic rock" },
+    { title: "Hey Jude", artist: "The Beatles", genre: "rock, pop rock" },
+    { title: "Stairway to Heaven", artist: "Led Zeppelin", genre: "rock, hard rock" },
+    { title: "Hotel California", artist: "Eagles", genre: "rock, soft rock" },
+    { title: "Smells Like Teen Spirit", artist: "Nirvana", genre: "rock, grunge" },
+    { title: "Sweet Child o' Mine", artist: "Guns N' Roses", genre: "rock, hard rock" },
+    { title: "Purple Haze", artist: "Jimi Hendrix", genre: "rock, psychedelic rock" },
+    { title: "Jump", artist: "Van Halen", genre: "rock, hard rock" },
+    { title: "Born to Be Wild", artist: "Steppenwolf", genre: "rock, classic rock" },
+    { title: "Back in Black", artist: "AC/DC", genre: "rock, hard rock" },
+    { title: "American Pie", artist: "Don McLean", genre: "rock, folk rock" },
+    { title: "Bohemian Rhapsody", artist: "Queen", genre: "rock, progressive rock" },
+    {"title": "All My Life", "artist": "Foo Fighters", "genre": "rock, hard rock" },
+    {"title": "Seven Nation Army", "artist": "The White Stripes", "genre": "rock, garage rock" },
+    {"title": "The Pretender", "artist": "Foo Fighters", "genre": "rock, hard rock" },
+    {"title": "Boulevard of Broken Dreams", "artist": "Green Day", "genre": "rock, punk rock" },
+    {"title": "By the Way", "artist": "Red Hot Chili Peppers", "genre": "rock, alternative rock" },
+    {"title": "Lateralus","artist": "Tool", "genre": "rock, progressive metal" },
+    {"title": "No One Knows", "artist": "Queens of the Stone Age", "genre": "rock, hard rock" },
+    {"title": "Black Rain", "artist": "Soundgarden", "genre": "grunge, hard rock" },
+    {"title": "Times Like These", "artist": "Foo Fighters", "genre": "rock, alternative rock" },
+    {"title": "I Am Mine", "artist": "Pearl Jam", "genre": "grunge, rock" },
+    {"title": "Vertigo", "artist": "U2", "genre": "rock, alternative rock" },
+    {"title": "Given Up", "artist": "Linkin Park", "genre": "rock, nu metal" }
+]
+
