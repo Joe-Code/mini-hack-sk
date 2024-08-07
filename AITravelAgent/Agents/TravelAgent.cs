@@ -1,12 +1,14 @@
 #pragma warning disable SKEXP0050
 using System.Text;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Microsoft.SemanticKernel.Plugins.Core;
 
 namespace AITravelAgent.Agents
 {
-    public class CurrencyAgent
+    public class TravelAgent
     {
         public static async Task ConvertCurrency(IKernelBuilder kernelBuilder)
         {
@@ -22,6 +24,10 @@ namespace AITravelAgent.Agents
 
             Console.WriteLine("The working directory is: " + workingDirectory + "\n");
 
+            // add logging
+            kernelBuilder.Services.AddLogging(configure => configure.AddConsole());
+            kernelBuilder.Services.AddLogging(configure => configure.SetMinimumLevel(LogLevel.Information));
+
             Kernel kernel = kernelBuilder.Build();
             kernel.ImportPluginFromType<CurrencyConverter>();
             kernel.ImportPluginFromType<ConversationSummaryPlugin>();
@@ -34,12 +40,11 @@ namespace AITravelAgent.Agents
             OpenAIPromptExecutionSettings settings = new() { ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions };
 
             string? input;
+            Console.WriteLine("JT's Travel Agency is here to help with all your travel questions. What can I help you with?\n");
+            input = Console.ReadLine();
 
-            do
+            while (!string.IsNullOrWhiteSpace(input))
             {
-                Console.WriteLine("What would you like to do?");
-                input = Console.ReadLine();
-
                 var intent = await kernel.InvokeAsync<string>(prompts["GetIntent"], new() { { "input", input } });
 
                 FunctionResult? result = null;
@@ -47,6 +52,7 @@ namespace AITravelAgent.Agents
                 switch (intent)
                 {
                     case "ConvertCurrency":
+                        Console.WriteLine("Converting currency for you!\n");
                         var currencyText = await kernel.InvokeAsync<string>(
                             prompts["GetTargetCurrencies"],
                             new() { { "input", input } }
@@ -60,14 +66,16 @@ namespace AITravelAgent.Agents
                             {"amount", currencyInfo[2]},
                             }
                         );
-                        Console.WriteLine(result);
+                        Console.WriteLine(result + "\n");
                         break;
                     case "SuggestDestinations":
+                        Console.WriteLine("Suggesting Destinations:\n");
                         chatHistory.AppendLine("User:" + input);
                         var recommendations = await kernel.InvokePromptAsync(input!);
-                        Console.WriteLine(recommendations);
+                        Console.WriteLine(recommendations + "\n");
                         break;
                     case "SuggestActivities":
+                        Console.WriteLine("Suggesting Activities:\n");
                         var chatSummary = await kernel.InvokeAsync("ConversationSummaryPlugin", "SummarizeConversation", new() { { "input", chatHistory.ToString() } });
                         if (input != null)
                         {
@@ -82,22 +90,25 @@ namespace AITravelAgent.Agents
                             chatHistory.AppendLine("User:" + input);
                             chatHistory.AppendLine("Assistant:" + activities.ToString());
 
-                            Console.WriteLine(activities);
+                            Console.WriteLine(activities + "\n");
                         }
                         break;
                     case "HelpfulPhrases":
                     case "Translate":
+                        Console.WriteLine("Sure, I will try to translate that for you.\n");
                         var autoInvokeResult = await kernel.InvokePromptAsync(input!, new(settings));
-                        Console.WriteLine(autoInvokeResult);
+                        Console.WriteLine(autoInvokeResult + "\n");
                         break;
                     default:
-                        Console.WriteLine("Sure, I can help with that.");
+                        Console.WriteLine("Sure, I can help with that default request.\n");
                         var otherIntentResult = await kernel.InvokePromptAsync(input!, new(settings));
-                        Console.WriteLine(otherIntentResult);
+                        Console.WriteLine(otherIntentResult + "\n");
                         break;
                 }
+
+                Console.WriteLine("Is there anything else I can help you with?\n");
+                input = Console.ReadLine();
             }
-            while (!string.IsNullOrWhiteSpace(input));
         }
     }
 }

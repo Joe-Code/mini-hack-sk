@@ -3,4 +3,4 @@ using SharedKernel;
 
 Console.WriteLine("Hello, Semantic Kernel World!\n");
 
-await CurrencyAgent.ConvertCurrency(KernelBuilder.CreateKernelBuilder());
+await TravelAgent.ConvertCurrency(KernelBuilder.CreateKernelBuilder());
