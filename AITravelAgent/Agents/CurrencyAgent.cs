@@ -1,4 +1,5 @@
 #pragma warning disable SKEXP0050
+using System.Text;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Microsoft.SemanticKernel.Plugins.Core;
@@ -15,7 +16,7 @@ namespace AITravelAgent.Agents
             // Implement this code so the plugin will run in the correct directory while debugging and in the correct directory while in release mode.
 #if DEBUG
             string workingDirectory = @"C:\repos\mini-hack-sk\aitravelagent\prompts";
-#else
+#elif RELEASE
             string workingDirectory = @"Prompts";
 #endif
 
@@ -23,64 +24,80 @@ namespace AITravelAgent.Agents
 
             Kernel kernel = kernelBuilder.Build();
             kernel.ImportPluginFromType<CurrencyConverter>();
-            // kernel.ImportPluginFromType<ConversationSummaryPlugin>();
+            kernel.ImportPluginFromType<ConversationSummaryPlugin>();
+
             var prompts = kernel.ImportPluginFromPromptDirectory(workingDirectory);
 
+            StringBuilder chatHistory = new();
+
             // Set the ToolCallBehavior property
-            OpenAIPromptExecutionSettings settings = new()
+            OpenAIPromptExecutionSettings settings = new() { ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions };
+
+            string? input;
+
+            do
             {
-                ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
-            };
+                Console.WriteLine("What would you like to do?");
+                input = Console.ReadLine();
 
-            // var result = await kernel.InvokeAsync("CurrencyConverter",
-            //     "ConvertAmount",
-            //     new() {
-            //         {"targetCurrencyCode", "USD"},
-            //         {"amount", "52000"},
-            //         {"baseCurrencyCode", "VND"}
-            //     }
-            // );
+                var intent = await kernel.InvokeAsync<string>(prompts["GetIntent"], new() { { "input", input } });
 
-            // var result = await kernel.InvokeAsync(prompts["GetTargetCurrencies"], new() {{"input", "How many Australian Dollars is 140,000 Korean Won worth?"}});
+                FunctionResult? result = null;
 
-            Console.WriteLine("What would you like to do?");
-            var input = Console.ReadLine();
-
-            var intent = await kernel.InvokeAsync<string>(prompts["GetIntent"], new() { { "input", input } });
-
-            FunctionResult? result = null;
-
-            switch (intent)
-            {
-                case "ConvertCurrency":
-                    var currencyText = await kernel.InvokeAsync<string>(
-                        prompts["GetTargetCurrencies"],
-                        new() { { "input", input } }
-                    );
-                    var currencyInfo = currencyText!.Split("|");
-                    result = await kernel.InvokeAsync("CurrencyConverter",
-                        "ConvertAmount",
-                        new() {
+                switch (intent)
+                {
+                    case "ConvertCurrency":
+                        var currencyText = await kernel.InvokeAsync<string>(
+                            prompts["GetTargetCurrencies"],
+                            new() { { "input", input } }
+                        );
+                        var currencyInfo = currencyText!.Split("|");
+                        result = await kernel.InvokeAsync("CurrencyConverter",
+                            "ConvertAmount",
+                            new() {
                             {"targetCurrencyCode", currencyInfo[0]},
                             {"baseCurrencyCode", currencyInfo[1]},
                             {"amount", currencyInfo[2]},
+                            }
+                        );
+                        Console.WriteLine(result);
+                        break;
+                    case "SuggestDestinations":
+                        chatHistory.AppendLine("User:" + input);
+                        var recommendations = await kernel.InvokePromptAsync(input!);
+                        Console.WriteLine(recommendations);
+                        break;
+                    case "SuggestActivities":
+                        var chatSummary = await kernel.InvokeAsync("ConversationSummaryPlugin", "SummarizeConversation", new() { { "input", chatHistory.ToString() } });
+                        if (input != null)
+                        {
+                            var activities = await kernel.InvokePromptAsync(
+                                input,
+                                new() {
+                                {"input", input},
+                                {"history", chatSummary},
+                                {"ToolCallBehavior", ToolCallBehavior.AutoInvokeKernelFunctions}
+                            });
+
+                            chatHistory.AppendLine("User:" + input);
+                            chatHistory.AppendLine("Assistant:" + activities.ToString());
+
+                            Console.WriteLine(activities);
                         }
-                    );
-                    Console.WriteLine(result);
-                    break;
-                case "SuggestDestinations":
-                case "SuggestActivities":
-                case "HelpfulPhrases":
-                case "Translate":
-                    var autoInvokeResult = await kernel.InvokePromptAsync(input!, new(settings));
-                    Console.WriteLine(autoInvokeResult);
-                    break;
-                default:
-                    Console.WriteLine("Sure, I can help with that.");
-                    var otherIntentResult = await kernel.InvokePromptAsync(input!, new(settings));
-                    Console.WriteLine(otherIntentResult);
-                    break;
+                        break;
+                    case "HelpfulPhrases":
+                    case "Translate":
+                        var autoInvokeResult = await kernel.InvokePromptAsync(input!, new(settings));
+                        Console.WriteLine(autoInvokeResult);
+                        break;
+                    default:
+                        Console.WriteLine("Sure, I can help with that.");
+                        var otherIntentResult = await kernel.InvokePromptAsync(input!, new(settings));
+                        Console.WriteLine(otherIntentResult);
+                        break;
+                }
             }
+            while (!string.IsNullOrWhiteSpace(input));
         }
     }
 }

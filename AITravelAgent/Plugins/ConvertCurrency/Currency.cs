@@ -30,13 +30,7 @@ namespace AITravelAgent
         public static void InitializeCurrencies()
         {
             currencyDictionary = [];
-
-#if DEBUG
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "AITravelAgent\\Plugins\\ConvertCurrency\\currencies.txt");
-#else
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Plugins\\ConvertCurrency\\currencies.txt");
-#endif
-
 
             // string filePath = Path.Combine(Directory.GetCurrentDirectory(), "AITravelAgent\\Plugins\\ConvertCurrency\\currencies.txt");
 
