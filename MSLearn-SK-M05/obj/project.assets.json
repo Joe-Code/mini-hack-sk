@@ -1129,11 +1129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\mini-hack-sk\\mslearn-sk-M05\\mslearn-sk-m05.csproj",
-      "projectName": "mslearn-sk-m05",
-      "projectPath": "C:\\repos\\mini-hack-sk\\mslearn-sk-M05\\mslearn-sk-m05.csproj",
+      "projectUniqueName": "C:\\repos\\mini-hack-sk\\MSLearn-SK-M05\\MSLearn-SK-M05.csproj",
+      "projectName": "MSLearn-SK-M05",
+      "projectPath": "C:\\repos\\mini-hack-sk\\MSLearn-SK-M05\\MSLearn-SK-M05.csproj",
       "packagesPath": "C:\\Users\\jfitzgerald\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\mini-hack-sk\\mslearn-sk-M05\\obj\\",
+      "outputPath": "C:\\repos\\mini-hack-sk\\MSLearn-SK-M05\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jfitzgerald\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1184,7 +1184,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
